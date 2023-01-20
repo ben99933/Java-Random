@@ -13,7 +13,7 @@ import clwhthr.exception.WrongArgumentException;
 import clwhthr.random.IMyRandom;
 import clwhthr.random.UniFormRandom;
 
-public class Main {
+public final class Main {
 	
 	public static void main(String arg[]) {
 		Status.setDefualt();
@@ -43,6 +43,7 @@ public class Main {
 	
 	static void printErrorInfo() {
 		System.out.println("Error: Invalid parameter");
+		System.out.println("use the parameter -help to check usage");
 	}
 	
 	

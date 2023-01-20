@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.IntStream;
 
-import clwhthr.Argument.ArgumentHandler;
-import clwhthr.Argument.Arguments;
+import clwhthr.argument.ArgumentHandler;
+import clwhthr.argument.Arguments;
 import clwhthr.exception.WrongArgumentException;
 import clwhthr.random.IMyRandom;
 import clwhthr.random.UniFormRandom;

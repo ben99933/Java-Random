@@ -1,36 +1,43 @@
-package clwhthr.Argument;
+package clwhthr.argument;
 
 import clwhthr.exception.WrongArgumentException;
 import clwhthr.main.Status;
 
-public class ArgumentIsInteger extends Argument{
+public class ArgmentLambda extends Argument {
 
 	@Override
 	public String getOptionName() {
 		// TODO 自動產生的方法 Stub
-		return "-i";
+		return "-l";
 	}
 
 	@Override
 	public int getArgNum() {
 		// TODO 自動產生的方法 Stub
-		return 0;
+		return 1;
 	}
 
 	@Override
 	public void setArgs(String[] args) throws WrongArgumentException {
-		Status.isInteger = true;
+		double lambda = 0;
+		try {
+			lambda = Double.valueOf(args[0]);
+			Status.lamda = lambda;
+		}catch (Exception e) {
+			throw new WrongArgumentException();
+		}
 	}
 
 	@Override
 	public String getUsage() {
-		return getOptionName();
+		return getOptionName() + " <lamda>";
 	}
 
 	@Override
 	public String[] getUsageInfo() {
-		// TODO 自動產生的方法 Stub
-		return new String[] {"Generate integer"};
+		return new String[] { "set the lambda for exponential distribution"};
 	}
+
+	
 
 }

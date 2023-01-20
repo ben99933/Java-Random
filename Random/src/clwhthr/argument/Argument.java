@@ -1,4 +1,4 @@
-package clwhthr.Argument;
+package clwhthr.argument;
 
 import clwhthr.exception.WrongArgumentException;
 

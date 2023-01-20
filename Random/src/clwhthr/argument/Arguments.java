@@ -1,4 +1,4 @@
-package clwhthr.Argument;
+package clwhthr.argument;
 
 public class Arguments {
 	private static Argument generateAmount;

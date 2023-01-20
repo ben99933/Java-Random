@@ -1,4 +1,4 @@
-package clwhthr.Argument;
+package clwhthr.argument;
 
 import java.util.Iterator;
 import java.util.List;

@@ -7,6 +7,7 @@ public class Arguments {
 	private static Argument geometricProb;
 	private static Argument lambda;
 	private static Argument isInteger;
+	private static Argument isHelperMode;
 	
 	public static void init() {
 		generateType = new ArgumnetGenerateType();
@@ -26,6 +27,9 @@ public class Arguments {
 		
 		isInteger = new ArgumentIsInteger();
 		register(isInteger);
+		
+		isHelperMode = new ArgumentHelpMode();
+		register(isHelperMode);
 		
 		
 	}

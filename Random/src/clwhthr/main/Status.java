@@ -11,6 +11,7 @@ public final class Status {
 	public static double geometricProbability;
 	public static double lamda;
 	public static boolean isInteger;
+	public static boolean helpMode;
 	
 	public static void setDefualt() {
 		generateAmount = 1;
@@ -21,6 +22,7 @@ public final class Status {
 		geometricProbability = 0.5D;
 		lamda = 1;
 		isInteger = false;
+		helpMode = false;
 	}
 	
 }

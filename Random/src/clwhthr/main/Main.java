@@ -24,6 +24,10 @@ public class Main {
 		try {
 			argHandler.handleArgs(argList);
 		} catch (WrongArgumentException e) {
+			printErrorInfo();
+			System.exit(0);
+		}
+		if(Status.helpMode) {
 			printUsage();
 			System.exit(0);
 		}
@@ -37,9 +41,13 @@ public class Main {
 		}
 	}
 	
+	static void printErrorInfo() {
+		System.out.println("Error: Invalid parameter");
+	}
+	
+	
 	static void printUsage() {
 		List<String>list = new ArrayList<String>();
-		list.add("Wrong argument!");
 		list.add("Usage:");
 		ArgumentHandler.getInstance().getUsageInfo(list);
 		for (String string : list) {

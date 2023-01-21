@@ -44,5 +44,7 @@ public enum RandomType {
 	
 	
 	public abstract String getArgName();
+	
+	//factory pattern
 	public abstract IMyRandom getRandom();
 }

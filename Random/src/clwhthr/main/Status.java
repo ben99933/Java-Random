@@ -3,6 +3,7 @@ package clwhthr.main;
 import clwhthr.random.RandomType;
 
 public final class Status {
+	
 	public static int generateAmount;
 	public static boolean hasBound;
 	public static double max;

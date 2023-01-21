@@ -16,6 +16,7 @@ public class ArgumentHandler {
 	private static volatile ArgumentHandler instance = null;
 	private Map<String, Argument> arguments;
 	
+	//singleton pattern
 	private ArgumentHandler() {
 		arguments = new TreeMap<String, Argument>();
 	}
@@ -26,9 +27,15 @@ public class ArgumentHandler {
 	
 	
 	public ArgumentHandler registerArguments(Argument arg) {
-		arguments.put(arg.getOptionName(), arg);
+		if(arguments.containsKey(arg.getOptionName())==false)arguments.put(arg.getOptionName(), arg);
 		return this;
 	}
+	
+	/**
+	 * 從args中找出對應的 "-"為開頭的字串
+	 * 根據該字串去從註冊好的Argument中找到符合的Argument
+	 * 將需要的字串傳遞給argument 同時它會對Status的static variable做操作
+	 */
 	public void handleArgs(List<String> args) throws WrongArgumentException{
 		Iterator<String> iterator = args.iterator();
 		while(iterator.hasNext()) {
@@ -50,12 +57,14 @@ public class ArgumentHandler {
 		}
 		
 	}
+	/***
+	 * 使用說明書的string 以list表示
+	 */
 	public void getUsageInfo(List list) {
 		arguments.forEach((string, arg)->{
 			list.add("-------------------------");
 			list.add(arg.getUsage());
 			list.addAll(List.of(arg.getUsageInfo()));
-			
 		});
 	}
 }

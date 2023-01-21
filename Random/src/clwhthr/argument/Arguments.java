@@ -1,14 +1,17 @@
 package clwhthr.argument;
 
 public class Arguments {
-	private static Argument generateAmount;
-	private static Argument generateType;
-	private static Argument uniformBound;
-	private static Argument geometricProb;
-	private static Argument lambda;
-	private static Argument isInteger;
-	private static Argument isHelperMode;
+	private static Argument generateAmount;//∕﹚璶块碭计
+	private static Argument generateType;//块繦诀跑计琌沮贺繦诀だガ?
+	private static Argument uniformBound;//uniform distribution
+	private static Argument geometricProb;//碭だガ穦ノ把计
+	private static Argument lambda;//计だガ穦ノ把计
+	private static Argument isInteger;//琌块俱计
+	private static Argument isHelperMode;//把计琌 -help 硂穦琵ㄤ把计常礚
 	
+	/**
+	 * Argument﹍て㎝Argumnet handler爹
+	 */
 	public static void init() {
 		generateType = new ArgumnetGenerateType();
 		register(generateType);

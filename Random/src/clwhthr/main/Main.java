@@ -16,13 +16,13 @@ import clwhthr.random.UniFormRandom;
 public final class Main {
 	
 	public static void main(String arg[]) {
-		Status.setDefualt();
+		Status.setDefualt();//Status保存此程式會用到的狀態 
 		Arguments.init();
-		ArgumentHandler argHandler = ArgumentHandler.getInstance();
+		ArgumentHandler argHandler = ArgumentHandler.getInstance(); //singleton pattern
 		IMyRandom random;
 		List<String>argList = List.of(arg);
 		try {
-			argHandler.handleArgs(argList);
+			argHandler.handleArgs(argList);//處裡參數
 		} catch (WrongArgumentException e) {
 			printErrorInfo();
 			System.exit(0);
@@ -31,7 +31,10 @@ public final class Main {
 			printUsage();
 			System.exit(0);
 		}
-		random = Status.distributionType.getRandom();
+		/***
+		 * 根據Status的各項資訊去建立相對應的Random
+		 */
+		random = Status.distributionType.getRandom(); //factory pattern
 		for(int i = 0;i<Status.generateAmount;i++) {
 			double result = random.next();
 			if(Status.isInteger) {

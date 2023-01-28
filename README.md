@@ -7,7 +7,7 @@
 - geometric distribution
 - exponential distribution
 
-##下載
+## 下載
 到<a href="https://github.com/ben99933/Java-Random/releases/tag/v0.1-beta">relase</a>即可下載
 
 ## 用法

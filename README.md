@@ -16,3 +16,6 @@
 若要查詢其他參數的相關用法請使用 -help
 > java -jar random.jar -help
 
+## 待更新項目
+1. normal distribution
+2. standard normal distribution

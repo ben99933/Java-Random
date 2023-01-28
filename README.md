@@ -19,3 +19,4 @@
 ## 待更新項目
 1. normal distribution
 2. standard normal distribution
+3. 把status 和 argument handler 解耦合
